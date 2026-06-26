@@ -1,0 +1,13 @@
+# System Architecture (系统架构设计)
+
+##  整体架构
+本项目采用前后端分离架构：
+- 前端 (Frontend)：React + Next.js，负责用户界面展示与交互。
+- 后端 (Backend)：Python + FastAPI，负责核心业务逻辑与 AI 接口对接。
+- 数据库 (Database)：PostgreSQL + 向量数据库。
+
+##  数据流向
+1. 用户在前端上传 PDF 论文。
+2. 前端将文件发送至 FastAPI 后端。
+3. 后端解析 PDF 并将其存入向量数据库。
+4. 用户提问时，调用 LLM API 结合向量数据进行回答。
